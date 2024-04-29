@@ -159,7 +159,8 @@ bindsym $mod+Shift+e layout toggle split
 # set $wallpaper /usr/share/backgrounds/tuxedo-wallpaper-2204-08.jpg
 # set $wallpaper /usr/share/wallpapers/ColdRipple/contents/images/2560x1600.jpg
 # set $wallpaper /usr/share/wallpapers/Kay/contents/images_dark/5120x2880.png
-set $wallpaper /home/nor/Downloads/3628147.jpg 
+# set $wallpaper /home/nor/Downloads/3628147.jpg 
+set $wallpaper /home/nor/Bilder/Debian_Wallpaper.png
 
 # Set the wallpaper up with feh
 exec_always feh --bg-scale $wallpaper
@@ -229,3 +230,4 @@ bar {
         separator $fg
     }
 }
+
