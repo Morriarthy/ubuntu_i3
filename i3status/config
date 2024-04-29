@@ -1,1 +1,57 @@
-1st commit in i3status
+general {
+  colors = true
+  color_good = "#a3be8c"
+  color_degraded = "#ebcb8b"
+  color_bad = "#bf616a"
+  interval = 1
+  separator = "|"
+}
+
+order += "memory"
+order += "cpu_usage"
+order += "disk /"
+order += "disk /home"
+order += "ethernet enp3s0"
+order += "wireless wlo1"
+order += "volume master"
+order += "tztime local"
+
+
+disk "/" {
+        format = "   %free Free "
+}
+
+disk "/home" {
+        format = " 󰠦  %free Free"
+}
+
+cpu_usage {
+  format = "   CPU: %usage "
+}
+
+memory {
+  memory_used_method = classical
+  format="   Memory: %used/%total"
+}
+
+ethernet enp3s0 {
+  format_up = " 󰌗  ETH: up (%speed) "
+  format_down = " 󰌙  ETH: down "
+}
+wireless wlo1 {
+  format_up = " 󰖩  WLS: (%quality at %ssid) %ip "
+  format_down  = " 󰖪  WLS: down "
+}
+
+volume master {
+        format = "   %volume "
+        format_muted = " 󰓄  Muted "
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+tztime local {
+		format = "%time"
+		format_time = "    %a %-d %b %H:%M"
+}
